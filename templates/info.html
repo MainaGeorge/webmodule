@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    {% if not user_data %}
+    <h3>There were no entries to be deleted</h3>
+    {% else %}
+    <h3>{{ title }}</h3>
+    <ul>
+    {% for each_dict in user_data %}
+        {% for key,value in each_dict.items() %}
+            {% if key != 'email' %}
+                <li>{{ key|upper }} : {{ value|upper }}</li>
+            {% else %}
+                 <li>{{ key|upper }} : {{ value }}</li>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% include 'footer.html' %}
+{% endblock %}

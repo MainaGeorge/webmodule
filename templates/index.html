@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <ul class="ment">
+        <li><a href="{{ url_for('mentor_names') }}">Mentor names</a></li>
+        <li><a href="{{ url_for('mentor_nicknames') }}">Mentor nicknames</a></li>
+        <li><a href="{{ url_for('user_info_name') }}">User Information by name</a></li>
+        <li><a href="{{ url_for('user_info_email') }}">User Information by email</a></li>
+        <li><a href="{{ url_for('student_info') }}">New student</a></li>
+        <li><a href="{{ url_for('update_phone_number') }}">Updated info </a></li>
+        <li><a href="{{ url_for('deleted') }}">Deleted </a></li>
+    </ul>
+{% endblock %}

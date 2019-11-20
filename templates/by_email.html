@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h3>information about user</h3>
+    <ul>
+    {% for each_dict in user_data %}
+        {% for key,value in each_dict.items() %}
+        <li>{{ key|upper }} : {{ value|upper }}</li>
+        {% endfor %}
+    {% endfor %}
+    </ul>
+
+    {% include 'footer.html' %}
+{% endblock %}

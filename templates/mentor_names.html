@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>Codecool's mentor names </h2>
+    <div class="content-area">
+    <table>
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for each_dict in mentor_names %}
+        <tr>
+            {% for value in each_dict.values() %}
+            <td>{{ value }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+    </div>
+
+    {% include 'footer.html' %}
+{% endblock %}
